@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Number</title>
+    <style>
+        body {
+            background-color: rgb(63, 146, 63);
+            text-align: center;
+            font: Normal 1rem Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="titulo">Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="calcular" id="botao">
+    <p id="res" class="resultado"></p>
+
+    <script>
+        botao.addEventListener('click', somar)
+
+        function somar() {
+            var tn1 = document.getElementById('txtn1');
+            var tn2 = document.getElementById('txtn2');
+            var botao = document.getElementById('botao');
+            var resultado = document.getElementById('res');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var soma = n1 + n2;
+            resultado.innerHTML = `A Somas dos Valos são:${soma}`;
+
+        }
+    </script>
+</body>
+
+</html>
