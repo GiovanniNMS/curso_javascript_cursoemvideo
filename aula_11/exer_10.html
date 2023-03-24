@@ -1,0 +1,47 @@
+<!--Executando o exercicio 09 html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infraction System</title>
+    <style>
+        body{
+            background-color: rgb(202, 53, 53);
+            text-align: center;
+            margin-top: 20%;
+            font: normal 1rem arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Infraction System</h1>
+    Quantos KM/h esta seu carro: <input type="number" name="txtvelo" id="txtvelo">
+    <input type="button" value="verificar" id="verificar">
+    <p id="res"></p>
+    <script>
+        var botao = document.getElementById('verificar')
+
+        botao.addEventListener('click', verificar)
+        function verificar() {
+
+            var txtVelo = document.getElementById('txtvelo')
+            var velocidade = Number(txtVelo.value)
+            var res = document.getElementById('res')
+            
+            if(velocidade >= 60){
+                res.innerHTML = `Você esta a ${velocidade}KM/h e esta multado por excesso de velocidade`
+            } else{
+                res.innerHTML = `Voce esta a ${velocidade}KM/h, continue dirigindo com segurança`
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
